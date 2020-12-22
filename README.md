@@ -5,4 +5,4 @@
 
 ตัวอย่างการแทรกรูป
 
-![KKULOGO](cover_page_home.png)
+![KKULOGO](cover_page_home.jpg)
