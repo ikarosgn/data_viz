@@ -1,0 +1,214 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOKM4aGhCyIRXRiOLydCVtf",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ikarosgn/data_viz/blob/main/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QguzanrnSfNL",
+        "outputId": "69511e0e-594b-4d23-bcef-16f45038543d"
+      },
+      "source": [
+        "#ข้อ1. 12:30:15\r\n",
+        "a1 = 12\r\n",
+        "b1 = 30\r\n",
+        "c1 = 15\r\n",
+        "d = 60\r\n",
+        "v1 = a1*d*d+b1*d+c1\r\n",
+        "t1 = '12:30:15'\r\n",
+        "f1 = t1.split( ',' )\r\n",
+        "print(f'{f1} มี {v} วินาที')\r\n"
+      ],
+      "execution_count": 83,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['12:30:15'] มี 45015 วินาที\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JPxpMxA-ny6B",
+        "outputId": "6c7cf376-2e2f-4bc3-ef7d-8e14fe2585a8"
+      },
+      "source": [
+        "#ข้อ2. 13:41:07\r\n",
+        "a2 = 13\r\n",
+        "b2 = 41\r\n",
+        "c2 = 7\r\n",
+        "d = 60\r\n",
+        "v2 = a2*d*d+b2*d+c2\r\n",
+        "t2 = '13:41:07'\r\n",
+        "f2 = t2.split( ',' )\r\n",
+        "print(f'{f2} มี {v2} วินาที')"
+      ],
+      "execution_count": 82,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['13:41:07'] มี 49267 วินาที\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0h0K29wpnzhB",
+        "outputId": "06c79ad5-29a0-4fb0-dc29-a14da6de0716"
+      },
+      "source": [
+        "#ข้อ3. 12:53:15\r\n",
+        "a3 = 12\r\n",
+        "b3 = 53\r\n",
+        "c3 = 15\r\n",
+        "d = 60\r\n",
+        "v3 = a3*d*d+b3*d+c3\r\n",
+        "t3 = '12:53:15'\r\n",
+        "f3 = t3.split( ',' )\r\n",
+        "print(f'{f3} มี {v3} วินาที')"
+      ],
+      "execution_count": 84,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['12:53:15'] มี 46395 วินาที\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aaj-KW_gnz7l",
+        "outputId": "2eaf351b-4dd1-43c4-990c-b94c139ff7e2"
+      },
+      "source": [
+        "#ข้อ4. 00:59:25\r\n",
+        "a4 = 0\r\n",
+        "b4 = 59\r\n",
+        "c4 = 25\r\n",
+        "d = 60\r\n",
+        "v4 = a4*d*d+b4*d+c4\r\n",
+        "t4 = '00:59:25'\r\n",
+        "f4 = t4.split( ',' )\r\n",
+        "print(f'{f4} มี {v4} วินาที')"
+      ],
+      "execution_count": 85,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['00:59:25'] มี 3565 วินาที\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ay-rHOw2n0MV",
+        "outputId": "a9117acc-feff-4746-d9e1-7799fe89d18c"
+      },
+      "source": [
+        "#ข้อ5. 11:11:11\r\n",
+        "a5 = 11\r\n",
+        "b5 = 11\r\n",
+        "c5 = 11\r\n",
+        "d = 60\r\n",
+        "v5 = a5*d*d+b5*d+c5\r\n",
+        "t5 = '11:11:11'\r\n",
+        "f5 = t5.split( ',' )\r\n",
+        "print(f'{f5} มี {v5} วินาที')"
+      ],
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['11:11:11'] มี 40271 วินาที\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fAfBcprtqLFM",
+        "outputId": "d83757b0-21fe-4f95-c68d-4f04801f1819"
+      },
+      "source": [
+        "#ข้อ6. 16:06:09\r\n",
+        "a6 = 16\r\n",
+        "b6 = 6\r\n",
+        "c6 = 9\r\n",
+        "d = 60\r\n",
+        "v6 = a6*d*d+b6*d+c6\r\n",
+        "t6 = '16:06:09'\r\n",
+        "f6 = t6.split( ',' )\r\n",
+        "print(f'{f6} มี {v6} วินาที')"
+      ],
+      "execution_count": 87,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['16:06:09'] มี 57969 วินาที\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
