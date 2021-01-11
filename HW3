@@ -1,0 +1,83 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled3.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOnExT03kAGqmyCqBVKElwv",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ikarosgn/data_viz/blob/main/HW3\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "TpB401cbvR-t"
+      },
+      "source": [
+        "list_time = ['12:30:15','13:41:07','12:53:15','00:59:25','11:11:11','16:06:09']"
+      ],
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "c9cylUFAwfD7"
+      },
+      "source": [
+        "\r\n",
+        "def time_sec(t) :\r\n",
+        "    time_sp = t.split(':')\r\n",
+        "    sec = int(time_sp[0])*3600 + int(time_sp[1])*60 + int(time_sp[2])\r\n",
+        "    return sec"
+      ],
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BvmwjEtkwsT2",
+        "outputId": "acfdeb3b-2f23-4973-e37b-7817338f2aab"
+      },
+      "source": [
+        "for i in list_time :\r\n",
+        "    print(f'เวลา {i} มีวินาทีได้เท่ากับ{time_sec(i)} วินาที')"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "เวลา 12:30:15 มีวินาทีได้เท่ากับ45015 วินาที\n",
+            "เวลา 13:41:07 มีวินาทีได้เท่ากับ49267 วินาที\n",
+            "เวลา 12:53:15 มีวินาทีได้เท่ากับ46395 วินาที\n",
+            "เวลา 00:59:25 มีวินาทีได้เท่ากับ3565 วินาที\n",
+            "เวลา 11:11:11 มีวินาทีได้เท่ากับ40271 วินาที\n",
+            "เวลา 16:06:09 มีวินาทีได้เท่ากับ57969 วินาที\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
