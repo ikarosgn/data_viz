@@ -1,0 +1,100 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled4.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMl5wQ6sYBpx9p6GA8hp+An",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ikarosgn/data_viz/blob/main/Hw4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "E8aUoSYmisE3"
+      },
+      "source": [
+        "def GPA(score) :\r\n",
+        "    if score > 100 :\r\n",
+        "       print(f'Error')\r\n",
+        "    elif 80 <= score < 101 :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ A')\r\n",
+        "    elif 75 <= score < 80  :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ B+')\r\n",
+        "    elif 70 <= score < 75  :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ B')\r\n",
+        "    elif 65 <= score < 70 :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ C+')\r\n",
+        "    elif 60 <= score < 65 :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ C')\r\n",
+        "    elif 55 <= score < 60 :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ D+')\r\n",
+        "    elif 50 <= score < 55 :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ D')\r\n",
+        "    elif 0 <= score < 50 :\r\n",
+        "       print(f'คะแนนที่ได้คือ {score} เกรดที่ได้คือ F')\r\n",
+        "    elif score < 0 :\r\n",
+        "       print(f'Error')"
+      ],
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Urgcj8ECiy2h"
+      },
+      "source": [
+        "list_gpa = [1,50,65,90,101,-5,49]"
+      ],
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yvxZeJ5Wi08k",
+        "outputId": "9f4d7208-2b63-4d96-bc22-cee7b4479173"
+      },
+      "source": [
+        "for i in list_gpa :\r\n",
+        "    GPA(i)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "คะแนนที่ได้คือ 1 เกรดที่ได้คือ F\n",
+            "คะแนนที่ได้คือ 50 เกรดที่ได้คือ D\n",
+            "คะแนนที่ได้คือ 65 เกรดที่ได้คือ C+\n",
+            "คะแนนที่ได้คือ 90 เกรดที่ได้คือ A\n",
+            "Error\n",
+            "Error\n",
+            "คะแนนที่ได้คือ 49 เกรดที่ได้คือ F\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
