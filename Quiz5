@@ -5,7 +5,7 @@
     "colab": {
       "name": "Untitled",
       "provenance": [],
-      "authorship_tag": "ABX9TyNbtjDk/xMZ+q/qQPHhCUnv",
+      "authorship_tag": "ABX9TyP1nqM4czHi+HXxvFO6hD7Z",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -200,19 +200,21 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "SL3WQBslzUwE",
-        "outputId": "bb122154-4a27-462a-80c2-85e2905452aa"
+        "outputId": "378f29aa-9e37-4b68-8eec-09a6ef03ceb5"
       },
       "source": [
         "data_beta = data_1[data_1['Unnamed: 0'] < '2020-06-02']\n",
         "beta1 = data_beta[['alpha','beta']].sum()\n",
-        "print(f' Sum alpha and beta 2/62563 ')"
+        "print(beta1)"
       ],
-      "execution_count": 25,
+      "execution_count": 31,
       "outputs": [
         {
           "output_type": "stream",
           "text": [
-            " Sum alpha and beta 2/62563 \n"
+            "alpha     24.16\n",
+            "beta     102.00\n",
+            "dtype: float64\n"
           ],
           "name": "stdout"
         }
@@ -225,21 +227,28 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "EmkAqnlY_cUv",
-        "outputId": "0824f5c0-ebaf-4f1c-c02c-39cce0b6a956"
+        "outputId": "e3e79e21-42b2-4055-f418-14f705cd7530"
       },
       "source": [
         "data_alpha = data_1[data_1['Unnamed: 0'] >= '2020-06-02']\n",
         "alpha1 = data_alpha[['alpha','beta']].sum()\n",
-        "print(f'Sum alpha and beta 2/62563')"
+        "alpha1"
       ],
-      "execution_count": 26,
+      "execution_count": 32,
       "outputs": [
         {
-          "output_type": "stream",
-          "text": [
-            "Sum alpha and beta 2/62563\n"
-          ],
-          "name": "stdout"
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "alpha    13.72\n",
+              "beta     57.00\n",
+              "dtype: float64"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 32
         }
       ]
     },
