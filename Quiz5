@@ -3,9 +3,9 @@
   "nbformat_minor": 0,
   "metadata": {
     "colab": {
-      "name": "Untitled",
+      "name": "Untitled9.ipynb",
       "provenance": [],
-      "authorship_tag": "ABX9TyP1nqM4czHi+HXxvFO6hD7Z",
+      "authorship_tag": "ABX9TyOtiSz9eZbQKsghhcX3fnLP",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -30,13 +30,13 @@
     {
       "cell_type": "code",
       "metadata": {
-        "id": "tDOmyqXOv0tJ"
+        "id": "92ZXewWa6cAX"
       },
       "source": [
         "import pandas as pd\n",
         "import os"
       ],
-      "execution_count": 1,
+      "execution_count": 10,
       "outputs": []
     },
     {
@@ -45,19 +45,19 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "OhzQrimCv2Iy",
-        "outputId": "d61b5059-a951-4952-f6d8-eed7461724a7"
+        "id": "hfbMjqm-62jz",
+        "outputId": "2c801c01-c3c7-4ad2-d9e8-cca8c6815fcc"
       },
       "source": [
         "from google.colab import drive\n",
         "drive.mount('/content/drive')"
       ],
-      "execution_count": 2,
+      "execution_count": 11,
       "outputs": [
         {
           "output_type": "stream",
           "text": [
-            "Mounted at /content/drive\n"
+            "Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(\"/content/drive\", force_remount=True).\n"
           ],
           "name": "stdout"
         }
@@ -66,23 +66,23 @@
     {
       "cell_type": "code",
       "metadata": {
-        "id": "ybN-lYBCwBKu"
+        "id": "ZsKMo0gn6-Ly"
       },
       "source": [
         "path = '/content/drive/My Drive/dataviz_2021'"
       ],
-      "execution_count": 4,
+      "execution_count": 12,
       "outputs": []
     },
     {
       "cell_type": "code",
       "metadata": {
-        "id": "_4uuclEIwC1s"
+        "id": "7K7Ouh5R7Al_"
       },
       "source": [
-        "data_path = os.path.join(path,'example_timestamp.csv')\n"
+        "data_path = os.path.join(path,'search_request.csv')"
       ],
-      "execution_count": 5,
+      "execution_count": 13,
       "outputs": []
     },
     {
@@ -90,17 +90,25 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 254
+          "height": 620
         },
-        "id": "_crNXosIwQg2",
-        "outputId": "0a03bcaa-8b75-415a-fa38-ca0466474dc1"
+        "id": "F9PMHPB-7HSW",
+        "outputId": "e612f990-7ed2-46e2-ee91-2f7b1392043c"
       },
       "source": [
-        "data_1 = pd.read_csv('/content/drive/My Drive/dataviz_2021/example_timestamp.csv')\n",
+        "data_1 = pd.read_csv('/content/drive/My Drive/dataviz_2021/search_request.csv')\n",
         "data_1"
       ],
-      "execution_count": 8,
+      "execution_count": 14,
       "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "/usr/local/lib/python3.7/dist-packages/IPython/core/interactiveshell.py:2718: DtypeWarning: Columns (7,8,9) have mixed types.Specify dtype option on import or set low_memory=False.\n",
+            "  interactivity=interactivity, compiler=compiler, result=result)\n"
+          ],
+          "name": "stderr"
+        },
         {
           "output_type": "execute_result",
           "data": {
@@ -124,161 +132,187 @@
               "    <tr style=\"text-align: right;\">\n",
               "      <th></th>\n",
               "      <th>Unnamed: 0</th>\n",
-              "      <th>alpha</th>\n",
-              "      <th>beta</th>\n",
+              "      <th>search_id</th>\n",
+              "      <th>search_timestamp</th>\n",
+              "      <th>user_agent</th>\n",
+              "      <th>q</th>\n",
+              "      <th>user_id</th>\n",
+              "      <th>session_id</th>\n",
+              "      <th>number_of_result</th>\n",
+              "      <th>lat</th>\n",
+              "      <th>long</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
               "      <th>0</th>\n",
-              "      <td>2020-05-29</td>\n",
-              "      <td>8.78</td>\n",
-              "      <td>24</td>\n",
+              "      <td>0</td>\n",
+              "      <td>683de889-f923-494e-9d46-44a3d67b7259</td>\n",
+              "      <td>2018-06-14 12:34:35.449</td>\n",
+              "      <td>Wongnai/8.17.3 rv:8.17.3.3921 (iPhone5,4; iOS;...</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>5lqjjikta19d296mo7g2h1k86p</td>\n",
+              "      <td>18</td>\n",
+              "      <td>12.6347</td>\n",
+              "      <td>101.463</td>\n",
               "    </tr>\n",
               "    <tr>\n",
               "      <th>1</th>\n",
-              "      <td>2020-05-30</td>\n",
-              "      <td>13.00</td>\n",
-              "      <td>25</td>\n",
+              "      <td>1</td>\n",
+              "      <td>4a811230-ffa4-4631-a4c8-5d0394137d02</td>\n",
+              "      <td>2018-06-14 17:11:19.469</td>\n",
+              "      <td>Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like M...</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>1r3iotmp0o9slom91stdt9vivc</td>\n",
+              "      <td>10</td>\n",
+              "      <td>14.8009</td>\n",
+              "      <td>102.534</td>\n",
               "    </tr>\n",
               "    <tr>\n",
               "      <th>2</th>\n",
-              "      <td>2020-05-31</td>\n",
-              "      <td>0.44</td>\n",
-              "      <td>25</td>\n",
+              "      <td>2</td>\n",
+              "      <td>7ad6ee8e-438e-4bea-9183-74dcef9e358e</td>\n",
+              "      <td>2018-06-14 13:22:31.736</td>\n",
+              "      <td>Mozilla/5.0 (Linux; Android 7.0; SAMSUNG SM-J7...</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>5ci1eo4v5u9dha4ppgu94ue7p6</td>\n",
+              "      <td>8</td>\n",
+              "      <td>13.7383</td>\n",
+              "      <td>100.371</td>\n",
               "    </tr>\n",
               "    <tr>\n",
               "      <th>3</th>\n",
-              "      <td>2020-06-01</td>\n",
-              "      <td>1.94</td>\n",
-              "      <td>28</td>\n",
+              "      <td>3</td>\n",
+              "      <td>0c17a5f5-fa89-40f4-ae94-a8659268f827</td>\n",
+              "      <td>2018-06-02 12:37:27.331</td>\n",
+              "      <td>Mozilla/5.0 (Linux; Android 7.1.1; SM-N950F Bu...</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>39n535qgje9kpojp0grhfj8umk</td>\n",
+              "      <td>12</td>\n",
+              "      <td>12.6669</td>\n",
+              "      <td>101.861</td>\n",
               "    </tr>\n",
               "    <tr>\n",
               "      <th>4</th>\n",
-              "      <td>2020-06-02</td>\n",
-              "      <td>5.40</td>\n",
-              "      <td>20</td>\n",
+              "      <td>4</td>\n",
+              "      <td>6870dc3a-5602-44fc-80ed-df0a7783df9d</td>\n",
+              "      <td>2018-06-02 11:19:22.404</td>\n",
+              "      <td>Mozilla/5.0 (iPhone; CPU iPhone OS 11_3_1 like...</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>5pa03h6lj691to60erver1l8o4</td>\n",
+              "      <td>14</td>\n",
+              "      <td>12.2372</td>\n",
+              "      <td>99.88</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <th>5</th>\n",
-              "      <td>2020-06-03</td>\n",
-              "      <td>5.68</td>\n",
-              "      <td>21</td>\n",
+              "      <th>...</th>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <th>6</th>\n",
-              "      <td>2020-06-04</td>\n",
-              "      <td>2.64</td>\n",
-              "      <td>16</td>\n",
+              "      <th>10004352</th>\n",
+              "      <td>10005225</td>\n",
+              "      <td>5d8c10aa-63cf-4bdd-ab01-0af17a98781f</td>\n",
+              "      <td>2018-06-24 09:23:57.777</td>\n",
+              "      <td>okhttp/3.9.0;WongnaiAndroid 8.16.6;OPPO;CPH1729</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>153319.0</td>\n",
+              "      <td>1oaki72de48dm87jbgj2a2crgf</td>\n",
+              "      <td>22</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10004353</th>\n",
+              "      <td>10005226</td>\n",
+              "      <td>66cc94db-217a-4d8e-aa20-b1d10e17c968</td>\n",
+              "      <td>2018-06-24 17:03:39.908</td>\n",
+              "      <td>Wongnai/10.0 (iPhone10,6; iOS; 11.4; en_TH;)</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>1pb7i5fe2g9hd92qbkbgh06aek</td>\n",
+              "      <td>22</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10004354</th>\n",
+              "      <td>10005227</td>\n",
+              "      <td>4eb3b514-fb71-4dfe-a580-c560e8c9dcc7</td>\n",
+              "      <td>2018-06-24 19:17:55.797</td>\n",
+              "      <td>Wongnai/10.0 (iPhone10,6; iOS; 11.4; en_TH;)</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>282oq0of578c6p4q760medgd30</td>\n",
+              "      <td>22</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10004355</th>\n",
+              "      <td>10005228</td>\n",
+              "      <td>f5554532-2eb1-4ba6-a98e-1e10b2174d2c</td>\n",
+              "      <td>2018-06-24 16:53:06.067</td>\n",
+              "      <td>Wongnai/10.0 (iPhone10,6; iOS; 11.4; en_TH;)</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>21520.0</td>\n",
+              "      <td>2cpkib5gr19un9fmner728bair</td>\n",
+              "      <td>22</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10004356</th>\n",
+              "      <td>10005229</td>\n",
+              "      <td>48421ba4-8c69-46a5-aa05-425ddc82a09a</td>\n",
+              "      <td>2018-06-24 18:06:58.441</td>\n",
+              "      <td>Wongnai/10.0 (iPhone10,6; iOS; 11.4; en_TH;)</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>23581.0</td>\n",
+              "      <td>2hb8cusb4797ioih8nq118l4t0</td>\n",
+              "      <td>22</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n",
+              "<p>10004357 rows × 10 columns</p>\n",
               "</div>"
             ],
             "text/plain": [
-              "   Unnamed: 0  alpha  beta\n",
-              "0  2020-05-29   8.78    24\n",
-              "1  2020-05-30  13.00    25\n",
-              "2  2020-05-31   0.44    25\n",
-              "3  2020-06-01   1.94    28\n",
-              "4  2020-06-02   5.40    20\n",
-              "5  2020-06-03   5.68    21\n",
-              "6  2020-06-04   2.64    16"
+              "          Unnamed: 0                             search_id  ...      lat     long\n",
+              "0                  0  683de889-f923-494e-9d46-44a3d67b7259  ...  12.6347  101.463\n",
+              "1                  1  4a811230-ffa4-4631-a4c8-5d0394137d02  ...  14.8009  102.534\n",
+              "2                  2  7ad6ee8e-438e-4bea-9183-74dcef9e358e  ...  13.7383  100.371\n",
+              "3                  3  0c17a5f5-fa89-40f4-ae94-a8659268f827  ...  12.6669  101.861\n",
+              "4                  4  6870dc3a-5602-44fc-80ed-df0a7783df9d  ...  12.2372    99.88\n",
+              "...              ...                                   ...  ...      ...      ...\n",
+              "10004352    10005225  5d8c10aa-63cf-4bdd-ab01-0af17a98781f  ...      NaN      NaN\n",
+              "10004353    10005226  66cc94db-217a-4d8e-aa20-b1d10e17c968  ...      NaN      NaN\n",
+              "10004354    10005227  4eb3b514-fb71-4dfe-a580-c560e8c9dcc7  ...      NaN      NaN\n",
+              "10004355    10005228  f5554532-2eb1-4ba6-a98e-1e10b2174d2c  ...      NaN      NaN\n",
+              "10004356    10005229  48421ba4-8c69-46a5-aa05-425ddc82a09a  ...      NaN      NaN\n",
+              "\n",
+              "[10004357 rows x 10 columns]"
             ]
           },
           "metadata": {
             "tags": []
           },
-          "execution_count": 8
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "SL3WQBslzUwE",
-        "outputId": "378f29aa-9e37-4b68-8eec-09a6ef03ceb5"
-      },
-      "source": [
-        "data_beta = data_1[data_1['Unnamed: 0'] < '2020-06-02']\n",
-        "beta1 = data_beta[['alpha','beta']].sum()\n",
-        "print(beta1)"
-      ],
-      "execution_count": 31,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "text": [
-            "alpha     24.16\n",
-            "beta     102.00\n",
-            "dtype: float64\n"
-          ],
-          "name": "stdout"
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "EmkAqnlY_cUv",
-        "outputId": "e3e79e21-42b2-4055-f418-14f705cd7530"
-      },
-      "source": [
-        "data_alpha = data_1[data_1['Unnamed: 0'] >= '2020-06-02']\n",
-        "alpha1 = data_alpha[['alpha','beta']].sum()\n",
-        "alpha1"
-      ],
-      "execution_count": 32,
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "alpha    13.72\n",
-              "beta     57.00\n",
-              "dtype: float64"
-            ]
-          },
-          "metadata": {
-            "tags": []
-          },
-          "execution_count": 32
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "E1CFcfAf_0kH",
-        "outputId": "125b54a9-4c69-4534-cfa9-f0555bd16ae2"
-      },
-      "source": [
-        "beta1 > alpha1"
-      ],
-      "execution_count": 27,
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "alpha    True\n",
-              "beta     True\n",
-              "dtype: bool"
-            ]
-          },
-          "metadata": {
-            "tags": []
-          },
-          "execution_count": 27
+          "execution_count": 14
         }
       ]
     }
